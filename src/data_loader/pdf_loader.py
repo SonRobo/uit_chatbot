@@ -14,7 +14,7 @@ from llama_index.core.schema import Document
 from src.data_loader.base_loader import BaseLoader
 from src.utils.utility import convert_value
 
-nest_asyncio.apply()
+# nest_asyncio.apply()
 
 load_dotenv()
 

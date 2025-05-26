@@ -19,6 +19,11 @@ WORKDIR /app
 COPY --from=builder /app/.venv .venv/
 COPY . .
 
+# RUN apt-get update && apt-get install -y ca-certificates
+
+
 # CMD ["/app/.venv/bin/python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
-CMD ["/app/.venv/bin/python", "main.py"]
+# CMD ["/app/.venv/bin/python", "main.py"]
+CMD ["/app/.venv/bin/uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8501", "--loop", "asyncio"]
+
