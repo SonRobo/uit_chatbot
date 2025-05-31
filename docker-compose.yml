@@ -5,12 +5,12 @@ services:
       - --host
       - 0.0.0.0
       - --port
-      - '8080'
+      - '8501'
       - --scheme
       - http
     image: cr.weaviate.io/semitechnologies/weaviate:1.26.1
     ports:
-      - 8080:8080
+      - 8501:8501
       - 50051:50051
     volumes:
       - weaviate_data:/var/lib/weaviate
@@ -41,7 +41,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8501:8501
+      - 8080:8080
     depends_on:
       - weaviate
       - mongo

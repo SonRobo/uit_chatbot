@@ -24,6 +24,6 @@ COPY . .
 
 # CMD ["/app/.venv/bin/python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
-# CMD ["/app/.venv/bin/python", "main.py"]
-CMD ["/app/.venv/bin/uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8501", "--loop", "asyncio"]
+CMD ["/app/.venv/bin/python", "main.py"]
+# CMD ["/app/.venv/bin/uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8501", "--loop", "asyncio"]
 
